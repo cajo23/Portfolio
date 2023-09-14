@@ -1,0 +1,281 @@
+/*ul ta bort bullet points med list-style-type none.
+display inline flex så att items bara tar upp så mycket plats de behöver.
+gap mellanrum mellan items med 1rem för att den anpassar sig. */
+ul
+{
+  list-style-type: none;
+  display: inline-flex;
+  gap: 1rem;
+}
+
+/*border radius gör kanterna runt innehåll rundade.
+font size 1.5rem.
+background color på text.
+text-decoration none för att ta bort linjen under länk.
+textens färg vit*/
+a {
+  display: flex;
+  background-color:#7EAA92 ;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+
+/*nav class display flex så att den lägger sig som ett block.
+justify content flex end flyttar navigationen till höger (slutet av sidan).
+padding 0 dvs ingen onödig utfyllnad.
+*/
+div.nav
+{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+/*parent > child.
+display flex för att den ska lägga sig som ett block.
+font family ändrar stilen på texten i h1.
+font size storlek på text i h1.
+Färg grön.
+margin 0 ingen marginal som stör.
+marginal left så att h1 hamnar rätt på sidan.*/
+.namn > h1
+{
+  display: flex;
+  font-family: 'Moon Dance', cursive;
+  font-size: 3rem;
+  color: #7EAA92;
+  margin: 0;
+  margin-left: 250px;
+}
+
+/*class align.
+display flex som ett block.
+align items center för att texten ska hamna någorlunda centrerat av bildens högra sida.
+justify-content för att texten och bilden ska hamna någorlunda centrerat av sidan.
+*/
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: center
+      }
+ 
+
+      /*jag vill att höjden ska vara 400px
+      border radius är för att jag vill göra bilden rund*/
+  img {
+    height: 400px;
+    border-radius: 50%;
+  }
+  
+      /*class h2. font size 20px.
+      padding left 20px så att texten flyttar ut 20px från bilden.
+      font family times. */
+  .h2 {
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: 'Times New Roman', Times, serif
+  }
+
+      /*p som ligger i h2.
+      font storlek 20px på texten.
+      font family times.*/
+  .h2 p 
+  {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+  /*Anpassad för mobiler. Från 319px och uppåt. max 480px eller lägre.
+  Utför bakgrundsfärg i body.
+  */
+@media(min-width:319px) and (max-width:480px)
+{
+ body{
+  background-color: grey;
+  }
+}
+
+
+/*Anpassad för mobiler.Från 319px och uppåt. max 480px eller lägre.
+Ändrar höjd på bild till 200px*/
+@media(min-width:319px) and (max-width:480px)
+{
+ img{
+  height: 200px;
+  }
+}
+
+/*Anpassad för mobiler. Från 319px och uppåt. max 480px eller lägre.
+Ändrar h2 font storlek på "About me"*/
+@media(min-width:319px) and (max-width:480px)
+{
+ h2{
+  font-size: 18px;
+  }
+}
+
+/*Anpassad för mobiler. Från 319px och uppåt. max 480px eller lägre.
+ändrar p font storlek texten*/
+@media(min-width:319px) and (max-width:480px)
+{
+  .align p{
+ font-size: 15px;
+  }
+}
+
+/*Anpassad för mobiler. Från 319px och uppåt. max 480px eller lägre.
+Ändrar h1 font storlek på namnet och
+lägger till marginal för att namnet ska hamna rätt på sidan.*/
+@media(min-width:319px) and (max-width:480px)
+{
+  .namn h1{
+ font-size: 25px;
+ margin-left: 22%
+ 
+  }
+}
+
+/*Anpassad för mobiler. Från 319px och uppåt. max 480px eller lägre.
+Ändrar font storlek på a som innehåller länkar till andra sidor.
+Så att de får plats på sidan.*/
+@media(min-width:319px) and (max-width:480px)
+{
+  a {
+    
+font-size: 13px;
+
+  }
+}
+
+
+
+/*Ipads/Tablets. Från 481px och uppåt. och max 1200px eller lägre.
+Utför backgrundsfärg i body.
+*/
+@media(min-width:481px) and (max-width:1200px)
+{
+ body {
+  background-color: grey;
+  }
+}
+
+/*Anpassad för ipad och tablets.Från 481px och uppåt. och max 1200px eller lägre.
+ Ändrar height på bilden så den inte tar upp hela sidan*/
+@media(min-width:481px) and (max-width:1200px)
+{
+ img {
+  height: 200px;
+  }
+}
+
+/*Anpassad för ipad tablets.Från 481px och uppåt. och max 1200px eller lägre.
+Ändrar font size på h2 "About me"*/
+@media(min-width:481px) and (max-width:1200px)
+{
+ h2 {
+  font-size:20px;
+  }
+}
+
+/*Anpassad för ipad tablets.Från 481px och uppåt. och max 1200px eller lägre.
+Ändrar font size storlek på bara texten i p.*/
+@media(min-width:481px) and (max-width:1200px)
+{
+ .align p {
+  font-size:15px ;
+  }
+}
+
+/*Anpassad för ipad tablets.Från 481px och uppåt. och max 1200px eller lägre.
+Ändrar font size storlek på namnet i h1.
+Flyttar namnet i h1 med margin left så att den placeras bra på sidan.
+Ändrar font weight till tunnare.*/
+@media(min-width:481px) and (max-width:1200px)
+{
+ .namn h1 {
+  font-size: 30px;
+  margin-left: 50%;
+  font-weight: lighter;
+  }
+}
+
+/*Anpassad för Ipad/Tablets. Från 481px och uppåt. och max 1200px eller lägre.
+Ändrar font size på a så att man ser navigationen bättre*/
+@media(min-width:481px) and (max-width:1200px)
+{
+ a {
+  font-size: 17px;
+  }
+}
+
+/*Anpassad för Laptops.Från 1201px och uppåt. och max 1600px eller lägre.
+ Jag byter bakgrundsfärg i body.
+*/
+@media(min-width: 1201px) and (max-width: 1600px)
+{
+ body {
+  background-color: gray;
+  }
+}
+
+/*Anpassad för Laptops.Från 1201px och uppåt. och max 1600px eller lägre.
+Jag ändrar font size i namnet h1.
+Jag gör texten tunnare med font weight, så att det ser mer bättre ut till storkeken(preferens).
+Jag lägger till en margin left så att namnet hamnar bra på sidan.
+*/
+@media(min-width: 1201px) and (max-width: 1600px)
+{
+ .namn h1 {
+  font-size: 3rem;
+  font-weight: lighter;
+  margin-left: 30%;
+
+  }
+}
+
+/*Anpassad för desktops.Från 1601px och uppåt.
+Jag ändrar font size så att man ser vad det står.
+Jag ändrar font weight till lighter så texten blir tunnare då det ser bättre ut till sidan
+(preferens).
+Jag lägger en margin left så att namnet inte flyttar för långt ut till sidan.
+*/
+@media(min-width: 1601px)
+{
+ .namn h1 {
+  font-size: 4rem;
+  font-weight: lighter;
+  margin-left: 30%;
+
+  }
+}
+
+/*Anpassad för Desktops. Från 1601px och uppåt.
+Ändrar font size på a, som innefattar navigationsknapparna.*/
+@media(min-width: 1601px)
+{
+ a {
+  font-size: 40px;
+  }
+}
+
+/*Anpassad till dektops. Från 1601px och uppåt.
+Ändrar font size på h2 "About me"*/
+@media(min-width: 1601px)
+{
+ h2 {
+  font-size: 40px;
+  }
+}
+
+/*Anpassad till desktops. Från 1601px och uppåt.
+Ändrar fontsize på paragrafen som ligger i align.*/
+@media(min-width: 1601px)
+{
+ .align p {
+  font-size: 25px;
+  }
+}
